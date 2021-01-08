@@ -1,0 +1,146 @@
+body {
+    padding: 0;
+    margin: 0;
+    /*background:url('../img/bg.jpg');*/
+    background: linear-gradient(#f19e21, #fce40d);
+}
+
+#header {
+    /*background: url('../img/bg1.jpg');*/
+    background: linear-gradient(#f19e21, #fce40d);
+    height: 150px;
+}
+
+#logotext {
+    float: right;
+    margin: 10px;
+    padding-top: 50px;
+    text-shadow: 1px 1px 1px black;
+    color: black;
+}
+
+#logo {
+    float: left;
+}
+
+#nav {
+    display: flex;
+}
+
+#nav a {
+    flex: 1;
+    text-align: center;
+    background: black;
+    color: orange;
+    font-weight: bold;
+    padding: 20px 0;
+    border-right: orange solid 1px;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    background: white;
+    color: black;
+}
+
+#picture {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.col>div {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.col>div>h2 {
+    color: orange;
+}
+
+.blocks {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-2>a {
+    background: black;
+    color: orange;
+    border: none;
+    justify-content: center;
+}
+
+.my-cont {
+    margin-top: 20px;
+    background: rgba(20, 1, 1, 0.671);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+}
+
+#footer {
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    color: orange;
+    background: black;
+}
+
+.image_block {
+    position: relative;
+    height: 255px;
+    width: 255px;
+    border-radius: 10px;
+}
+
+.flip-container {
+    perspective: 1000;
+    margin: 10px;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 255px;
+    height: 255px;
+}
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-color: rgb(0, 0, 0);
+    color: orange;
+    font-size: 11px;
+    border-radius: 10px;
+}
+
+.back>p {
+    margin-left: 4px;
+}
